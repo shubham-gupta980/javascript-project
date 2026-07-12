@@ -1,0 +1,92 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: rgb(235, 235, 168);
+    /* width: 100vw;
+    height: 100vh; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 28rem;
+    width: 30rem;
+    border: 2px solid #fff;
+    border-radius: 5%;
+    background-color: #fff;
+}
+h1 {
+    padding-top: 30px;
+    padding-left: 25px;
+}
+form {
+    padding: 30px;    
+}
+form select, button, input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.40rem;
+}
+form input {
+    border: 1px solid lightgray;
+    height: 40px;
+    padding-left: 5px;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 100px;
+}
+
+.select-container img {
+    max-width: 2rem;
+}
+
+.dropdown i {
+    margin-top: 20px;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+.select-container select {
+    font-size: 1rem;
+    width: auto;
+}
+.detailed {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+button {
+    margin-top: 2rem;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(128, 0, 128, 0.793);
+    color:#fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.select-container:hover {
+    border: 2px solid black;
+}
+button:hover {
+    border: 2px solid black;
+}
+form input:hover {
+    border: 2px solid black;
+}
