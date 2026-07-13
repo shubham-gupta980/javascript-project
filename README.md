@@ -62,7 +62,6 @@ cd javascript-project
 - Fetch API
 - Async & Await
 - Promises
-- Local Storage
 - ES6 Features
 
 ## 🎯 Purpose
