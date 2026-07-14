@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <h1>Chai or Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <h1>Change background color</h1>
+    <button id="chnclr">Start</button>
+    <button id="stopclr">Stop</button>
+
+    <div id="project" style="display: flex; justify-content: center; align-items: center;">
+        <div id="insert">
+            <div id="key">
+                Press the key and watch magic
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // setTimeout(function() {
+        //     console.log("Hello js");
+            
+        // }, 2000)
+
+        // setInterval(function() {
+        //     console.log("Hello hello");
+            
+        // }, 2000)
+
+        // const changeText = function() {
+        //     document.querySelector('h1').
+        //     innerHTML = "best js series"
+        // }
+
+        // setTimeout(changeText, 5000)
+        // const set = setTimeout(changeText, 3000)
+        // // clearTimeout(set);
+        // document.querySelector('#stop').addEventListener('click', function() {
+        //     clearTimeout(set);
+        //     console.log("Stopped");
+        // })
+
+        // const date = function(str) {
+        //     // console.log("Shubham")
+        //     console.log(str);
+        // }
+        // setInterval(date, 1000, "Shu")
+
+        // -------------------------------------------------------------------------------
+        let st;
+        document.querySelector('#start').addEventListener('click', function() {
+            st = setInterval(function() {
+                console.log("Shubham");
+            }, 1000)
+        })
+        document.querySelector('#stop').addEventListener('click', function() {
+            clearInterval(st);
+            console.log("stopped")
+        })
+
+        // Change every second backgroundcolor
+        const randomColor = function() {  // generate hex code
+            let hex = "0123456789ABCDEF";
+            let color = "#";
+            for (let i=0; i<6; i++) {
+                color += hex[Math.floor(Math.random()*16)];
+            }
+            return color;
+        }
+        console.log(randomColor());
+
+        let ch;
+        let body = document.querySelector('body');
+        document.querySelector('#chnclr').addEventListener('click', function() {
+            ch = setInterval(function() {
+                body.style.background = randomColor();
+            }, 1000)
+            
+        })
+        document.querySelector('#stopclr').addEventListener('click', function() {
+            clearInterval(ch);
+            ch = null;
+            console.log("stopped")
+        })
+        
+        // Keycode using js
+        const insert = document.querySelector('#insert');
+        window.addEventListener('keydown', (e) => {
+            insert.innerHTML = `
+            <div class='color'>
+                <table border>
+                    <tr>
+                    <th>key</th>
+                    <th>keyCode</th>
+                    <th>Code</th>
+                    </tr>
+                    <tr>
+                    <td>${e.key === " "? "Space": e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                    </tr>
+                </table>
+
+                </div>
+            `
+        })
+    </script>
+</body>
+</html>
